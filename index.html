@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Checkout - The Brokers Capital | Powered by Midori Capital</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+    />
+  </head>
+  <body>
+    <!-- form -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div
+          class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"
+        >
+          <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+            <h2 id="heading">Deposit at The Brokers Capital</h2>
+            <p>Pagamento Instantâneo Brasileiro - Pix</p>
+            <span
+              >Powered by
+              <a href="https://www.midoricapital.com.br" target="blank"
+                >Midori Capital</a
+              ></span
+            >
+            <form id="msform">
+              <!-- progressbar -->
+              <ul id="progressbar">
+                <li class="active" id="account"><strong>Account</strong></li>
+                <li id="personal"><strong>Personal</strong></li>
+                <li id="payment"><strong>Payment</strong></li>
+                <li id="confirm"><strong>Finish</strong></li>
+              </ul>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated"
+                  role="progressbar"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <br />
+              <!-- fieldsets -->
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Account Information:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="steps">Step 1 - 4</h2>
+                    </div>
+                  </div>
+                  <label class="fieldlabels">Email: *</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email (BRK)"
+                    required
+                  />
+                  <!-- <span id="error-message" class="error-message"></span> -->
+
+                  <label class="fieldlabels">Username: *</label>
+                  <input
+                    type="text"
+                    name="uname"
+                    placeholder="MetaTrade ID"
+                    required
+                  />
+                </div>
+                <input
+                  type="button"
+                  name="next"
+                  class="next action-button"
+                  value="Next"
+                />
+              </fieldset>
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Personal Information:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="steps">Step 2 - 4</h2>
+                    </div>
+                  </div>
+                  <label class="fieldlabels">First Name: *</label>
+                  <input
+                    type="text"
+                    name="fname"
+                    placeholder="First Name"
+                    required
+                  />
+                  <label class="fieldlabels">Last Name: *</label>
+                  <input
+                    type="text"
+                    name="lname"
+                    placeholder="Last Name"
+                    required
+                  />
+                  <label class="fieldlabels">Contact No.: *</label>
+                  <input
+                    type="text"
+                    name="phno"
+                    placeholder="Contact No."
+                    required
+                  />
+                  <label class="fieldlabels">Alternate Contact No.: *</label>
+                </div>
+                <input
+                  type="button"
+                  name="next"
+                  class="next action-button"
+                  value="Next"
+                />
+                <input
+                  type="button"
+                  name="previous"
+                  class="previous action-button-previous"
+                  value="Previous"
+                />
+              </fieldset>
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Payment Information:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="steps">Step 3 - 4</h2>
+                    </div>
+                  </div>
+                  <label class="fieldlabels">Amount USD: *</label>
+                  <input
+                    id="dollar-input"
+                    type="text"
+                    name="amount"
+                    placeholder="$1,000.00"
+                    required
+                  />
+                  <div class="brl">
+                    <label class="fieldlabels">Amount to be paid (BRL)</label>
+                    <span id="brl-result"></span>
+                  </div>
+                </div>
+                <input
+                  type="button"
+                  name="next"
+                  class="next action-button"
+                  value="Confirm"
+                />
+                <input
+                  type="button"
+                  name="previous"
+                  class="previous action-button-previous"
+                  value="Previous"
+                />
+              </fieldset>
+              <fieldset>
+                <div class="form-card">
+                  <div class="row">
+                    <div class="col-7">
+                      <h2 class="fs-title">Finish:</h2>
+                    </div>
+                    <div class="col-5">
+                      <h2 class="steps">Step 4 - 4</h2>
+                    </div>
+                  </div>
+                  <br />
+                  <h2 class="purple-text text-center">
+                    Amount to be paid (BRL):
+                    <span id="brl-result"></span>
+                  </h2>
+                  <br />
+                  <div class="row justify-content-center">
+                    <div class="pixCopy">
+                      <div class="pixCopyBox">
+                        <p>
+                          00020101021226990014br.gov.bcb.pix2577pix.bpp.com.br/25021356/qrs1/v2/cobv/01oSUKucWxaPKAExK5VduuaSKCMYVGGtBE2QecHG5204000053039865406492.295802BR5906DLOCAL6009Sao
+                          Paulo62070503***63045ACB
+                        </p>
+                      </div>
+                      <button id="copyButton" class="next copy-button">
+                        Copia e Cola ID
+                      </button>
+                    </div>
+
+                    <div class="qrCodeGer">
+                      <img src="https://i.ibb.co/zxpdQgH/download.png" />
+                    </div>
+                  </div>
+                  <br /><br />
+                  <div class="row justify-content-center">
+                    <div class="col-7 text-center">
+                      <h5 class="purple-text text-center">
+                        You Have Successfully Payment
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/js/form.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+    <script src="/assets/js/currency.js"></script>
+
+    <script src="/assets/js/copyButton.js"></script>
+  </body>
+</html>
